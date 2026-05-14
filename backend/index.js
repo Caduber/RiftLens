@@ -16,7 +16,7 @@ if (!process.env.RIOT_API_KEY) {
 
 // Middlewares
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', 'https://rift-lens-front.vercel.app'],
   methods: ['GET', 'OPTIONS'],
   credentials: false,
 }));
@@ -48,7 +48,9 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ error: true, status: 500, message: 'Erro interno do servidor.' });
 });
 
-app.listen(PORT, () => {
-  console.log(`✅ RIFT LENS Backend rodando em http://localhost:${PORT}`);
-  console.log(`   API Key: ${process.env.RIOT_API_KEY?.substring(0, 10)}...`);
-});
+// app.listen(PORT, () => {
+//   console.log(`✅ RIFT LENS Backend rodando em http://localhost:${PORT}`);
+//   console.log(`   API Key: ${process.env.RIOT_API_KEY?.substring(0, 10)}...`);
+// });
+
+export default app;
