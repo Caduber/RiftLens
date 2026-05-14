@@ -1,0 +1,6 @@
+#
+backend/server.env
+backend/package-lock.json
+backend/node_modules/
+frontend/node_modules/
+text.md
