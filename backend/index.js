@@ -16,7 +16,7 @@ if (!process.env.RIOT_API_KEY) {
 
 // Middlewares
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', 'https://rift-lens-front.vercel.app'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', 'https://rift-lens-front.vercel.app', 'https://rift-lens-front.vercel.app'],
   methods: ['GET', 'OPTIONS'],
   credentials: false,
 }));

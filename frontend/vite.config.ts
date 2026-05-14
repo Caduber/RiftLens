@@ -13,7 +13,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'https://rift-lens.vercel.app',
+        target: 'https://rift-lens-backend.vercel.app',
         changeOrigin: true,
       },
     },
